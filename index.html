@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Linking firebase version 8 CDNs first -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+    ></script>
+
+    <!-- Initializing firebase -->
+    <script defer src="init-firebase.js"></script>
+
+    <!-- Link our main.js AFTER we load initialize firebase -->
+    <script defer src="script.js"></script>
+
+    <!-- Secret Code that you can't get into! -->
+    <script
+      defer
+      src="dont-open/srsly-dont-open/like-rly-rly-don't-open/this-is-top-secret-bro/secret.js"
+    ></script>
+    <title>Hack This Site</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="login-section">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Password"
+          required
+        />
+        <button id="login-btn">Login</button>
+        <p>
+          Don't have an account?
+          <span id="show-register">Register here</span>
+        </p>
+      </div>
+
+      <div id="register-section" style="display: none">
+        <h2>Register</h2>
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input
+          type="password"
+          id="register-password"
+          placeholder="Password"
+          required
+        />
+        <button id="register-btn">Register</button>
+        <p>Already have an account? <span id="show-login">Login here</span></p>
+      </div>
+
+      <div id="hidden-content" style="display: none"></div>
+    </div>
+  </body>
+</html>
