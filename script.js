@@ -36,11 +36,11 @@ function register() {
         email: email,
         password: password,
       })
-      .then(() => {
+      .then(function () {
         alert('User registered successfully!');
         showLogin();
       })
-      .catch((error) => {
+      .catch(function (error) {
         alert(error.message);
       });
   } else {
@@ -56,9 +56,9 @@ function login() {
     database
       .orderByChild('email')
       .equalTo(email)
-      .once('value', (snapshot) => {
+      .once('value', function (snapshot) {
         if (snapshot.exists()) {
-          snapshot.forEach((childSnapshot) => {
+          snapshot.forEach(function (childSnapshot) {
             const user = childSnapshot.val();
             if (user.password === password) {
               document.getElementById('login-section').style.display = 'none';
