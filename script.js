@@ -1,5 +1,6 @@
 /* Reference to Entire Database */
 const database = firebase.database().ref();
+// Test
 
 /* Reference to HTML Elements */
 const registerBtn = document.getElementById('register-btn');
